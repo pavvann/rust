@@ -1,3 +1,3 @@
 # becoming a 'Rustacean'?
 
-check out rust book: https://doc.rust-lang.org/book/title-page.html
+check out the official rust book: https://doc.rust-lang.org/book/title-page.html
