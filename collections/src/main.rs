@@ -1,13 +1,32 @@
+
 fn main() {
-    let mut v = vec![1,2,3,4,5];
+    
+    enum SpreadsheetCell {
+        Int(i32),
+        Float(f64),
+        Text(String),
+    }
+
+    let row = vec![
+        SpreadsheetCell::Int(3),
+        SpreadsheetCell::Text(String::from("blue")),
+        SpreadsheetCell::Float(10.12),
+    ];
+
+    match &row[1] {
+        SpreadsheetCell::Int(i) => println!("{}", i),
+        _ => println!("Not an integer")
+    };
     
     
-    for i in &mut v {
-        *i += 50;
-    }
-    for i in &v {
-        println!("{}", i);
-    }
+    // let mut v = vec![1,2,3,4,5];
+    
+    // for i in &mut v {
+    //     *i += 50;
+    // }
+    // for i in &v {
+    //     println!("{}", i);
+    // }
     
     // let third = &v[2];
     // println!("The third element is {}", third);
