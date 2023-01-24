@@ -1,23 +1,42 @@
+use unicode_segmentation::UnicodeSegmentation;
 
 fn main() {
-    
-    enum SpreadsheetCell {
-        Int(i32),
-        Float(f64),
-        Text(String),
+
+    let hello = String::from("नमस्ते");
+
+    // bytes
+    for b in hello.bytes() {
+        println!("{}",b);
     }
 
-    let row = vec![
-        SpreadsheetCell::Int(3),
-        SpreadsheetCell::Text(String::from("blue")),
-        SpreadsheetCell::Float(10.12),
-    ];
+    // scalar 
+    for c in hello.chars() {
+        println!("{}", c);
+    }
+     
+    // Graphene clusters
+    for g in hello.graphemes(true) {
+        println!("{}", g);
+    }
 
-    match &row[1] {
-        SpreadsheetCell::Int(i) => println!("{}", i),
-        _ => println!("Not an integer")
-    };
     
+    // enum SpreadsheetCell {
+    //     Int(i32),
+    //     Float(f64),
+    //     Text(String),
+    // }
+
+    // let row = vec![
+    //     SpreadsheetCell::Int(3),
+    //     SpreadsheetCell::Text(String::from("blue")),
+    //     SpreadsheetCell::Float(10.12),
+    // ];
+
+    // match &row[1] {
+    //     SpreadsheetCell::Int(i) => println!("{}", i),
+    
+    //     _ => println!("Not an integer")
+    // };
     
     // let mut v = vec![1,2,3,4,5];
     
