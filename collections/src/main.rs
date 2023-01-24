@@ -1,25 +1,40 @@
-use unicode_segmentation::UnicodeSegmentation;
+use std::collections::HashMap;
 
 fn main() {
 
-    let hello = String::from("नमस्ते");
+    let blue = String::from("Blue");
+    let yellow = String::from("Yellow");
 
-    // bytes
-    for b in hello.bytes() {
-        println!("{}",b);
-    }
+    let mut scores = HashMap::new();
 
-    // scalar 
-    for c in hello.chars() {
-        println!("{}", c);
-    }
-     
-    // Graphene clusters
-    for g in hello.graphemes(true) {
-        println!("{}", g);
-    }
+    scores.insert(blue, 10);
+    scores.insert(yellow, 50 );
 
     
+
+
+
+
+
+
+    // let hello = String::from("नमस्ते");
+
+    // // bytes
+    // for b in hello.bytes() {
+    //     println!("{}",b);
+    // }
+
+    // // scalar 
+    // for c in hello.chars() {
+    //     println!("{}", c);
+    // }
+     
+    // // Graphene clusters
+    // for g in hello.graphemes(true) {
+    //     println!("{}", g);
+    // }
+
+
     // enum SpreadsheetCell {
     //     Int(i32),
     //     Float(f64),
