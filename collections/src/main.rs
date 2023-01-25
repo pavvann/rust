@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 fn main() {
 
-    let text = "hello world wonderful world";
+    let text = "visit beyondclub.xyz :)";
     let mut map = HashMap::new();
 
     for word in text.split_whitespace() {
